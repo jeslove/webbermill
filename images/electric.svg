@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.926" height="43.501" viewBox="0 0 30.926 43.501">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2af598"/>
+      <stop offset="1" stop-color="#009efd"/>
+    </linearGradient>
+  </defs>
+  <path id="electric" d="M24.129,8.836V0h-3.4V8.836H10.2V0H6.8V8.836H0V26.168a10.207,10.207,0,0,0,10.2,10.2h3.568V43.5h3.4V36.364h3.568a10.207,10.207,0,0,0,10.2-10.2V8.836Zm3.4,17.332a6.8,6.8,0,0,1-6.8,6.8H10.2a6.8,6.8,0,0,1-6.8-6.8V12.235H27.528Zm-11.67-2.294H9.941l3.738-8.411h3.713l-2.184,5.013h5.914l-3.653,7.647-2.974,1.7V26.593Zm0,0" fill="url(#linear-gradient)"/>
+</svg>

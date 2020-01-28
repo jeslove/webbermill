@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46.816" height="72.286" viewBox="0 0 46.816 72.286">
+  <g id="candidates" transform="translate(-152.634 -192.801)">
+    <path id="Path_274" data-name="Path 274" d="M176.042,337.4a23.435,23.435,0,0,0-23.408,23.408v3.638a12.507,12.507,0,0,0,12.493,12.493h21.831a12.507,12.507,0,0,0,12.493-12.493v-3.638A23.435,23.435,0,0,0,176.042,337.4Z" transform="translate(0 -111.854)" fill="#ff8a3c"/>
+    <path id="Path_275" data-name="Path 275" d="M256,337.4h0v39.54h10.916a12.507,12.507,0,0,0,12.493-12.493v-3.638A23.435,23.435,0,0,0,256,337.4Z" transform="translate(-79.957 -111.854)" fill="#e56705"/>
+    <path id="Path_280" data-name="Path 280" d="M188.47,192.8a19.77,19.77,0,1,0,19.77,19.77A19.792,19.792,0,0,0,188.47,192.8Z" transform="translate(-12.428 0)" fill="#ffcdbe"/>
+    <path id="Path_282" data-name="Path 282" d="M256,192.8h0v39.54h0a19.77,19.77,0,0,0,0-39.54Z" transform="translate(-79.957 0)" fill="#ffbeaa"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70.8" height="82.2" viewBox="0 0 70.8 82.2">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00efd1"/>
+      <stop offset="1" stop-color="#00acea"/>
+    </linearGradient>
+  </defs>
+  <path id="stethoscope" d="M84.4,48.6A11.1,11.1,0,1,0,70.3,59.3V71.1a15,15,0,0,1-30,0V54.2A23.942,23.942,0,0,0,61.6,30.4V16.1a2.946,2.946,0,0,0-3-3H52.1v-.2a3,3,0,0,0-6,0v6.4a3,3,0,0,0,6,0v-.2h3.5V30.4a18,18,0,0,1-36,0V19.1h3.3v.2a3,3,0,0,0,6,0V12.9a3,3,0,1,0-6,0v.2H16.6a2.946,2.946,0,0,0-3,3V30.4A24.045,24.045,0,0,0,34.3,54.2V71.1a21,21,0,0,0,42,0V59.3A11.07,11.07,0,0,0,84.4,48.6ZM73.3,53.7a5.1,5.1,0,1,1,5.1-5.1A5.121,5.121,0,0,1,73.3,53.7Z" transform="translate(-13.6 -9.9)" fill="url(#linear-gradient)"/>
+</svg>
