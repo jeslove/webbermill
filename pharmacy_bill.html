@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hospital Management Ghana</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!--//Favicon-->
+    <link id="themecss" rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+
+    <style>
+       input{
+           border-radius:6px !important;
+           border: none !important;
+           box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
+           
+       }
+
+       select{
+           border-radius:6px !important;
+           border: none !important;
+           box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
+           
+       }
+
+       textarea{
+           border-radius:6px !important;
+           border: none !important;
+           box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
+           
+       }
+
+       button{
+        border-radius:6px !important;
+        border: none !important;
+        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
+        
+    }
+
+       label{
+           font-size: 13px !important;
+           color: rgb(139, 138, 138);
+       }
+       .remove{
+           color: red;
+       }
+       #form-search input{
+        box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important; 
+        border-radius: 20px !important;
+        padding: 10px !important;
+        margin-top: 7px !important;
+       }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: red;">Logo</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                <span class="menu-toggle navbar-brand" style="font-size:20px;cursor:pointer;color:blue;">&#9776;</span>
+                
+                <div class="navbar-header">
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                    <img src="images/electric.svg" alt="" style="width:17px; margin-top:10px;" draggable="false">
+                    <span style="position: relative; top:8px;">ADMIN</span>
+                </div>
+
+             <form action="" method="post" enctype="application/x-www-form-urlencoded" class="pull-right" id="form-search">
+                <input type="search" name="search" id="search" required="required" placeholder="search anything">
+             </form>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav" id="mySidenav">
+                    <div class="userimages">
+                        <img src="images/Ellipse_5.png" alt="user-images" draggable="false">
+                        <h4><i class="fa fa-circle text-success"></i> Kate Iverson Appiah</h4>
+                        <h5 class="text-span">Super Admin</h5>
+                    </div>
+                    <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"><span><img src="images/birthday.svg" alt=""></span> </i>Birthday Reminder</a></li>
+                    <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> <span><img src="images/notice-board.svg" alt=""></span> Notice-Board</a></li>
+                    <li class="nav nav-list nav-list-expandable">
+                        <a style="color: rgb(179, 178, 178); font-size:13px;"><span><img src="images/message.svg" alt=""> Messages <span class="caret"></span></a>
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> Hardware & Networking </a></li>
+                            <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> Software Engineering </a></li>
+                        </ul>
+                    <li>
+                    <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"><span><img src="images/events.svg" alt=""></span> Events</a></li>
+                    <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> <span><img src="images/settings.svg" alt=""></span> Settings</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right navbar-user" id="showcolor">
+                    <li class="dropdown user-dropdown"><a  href="#" class="dropdown-toggle" data-toggle="dropdown" style="text-decoration: none;border-bottom: none; color:#fff;background-color:rgb(5, 153, 221);border-radius: 0px 0px 0px 80px;">
+                     <!-- <i class="fa fa-bell" style="font-size:25px;"></i>--> <span><img src="images/bell .svg" alt="" style="width:20px;"></span> 
+                    <span class="badge badge-light" style="position: absolute;left:20px; font-size:8px; background-color: black;">1</span></a></li>
+
+                    <li class="dropdown user-dropdown"><a  href="#" class="dropdown-toggle" data-toggle="dropdown" style="text-decoration: none;border-bottom: none; color:#fff;background-color:rgb(5, 153, 221);border-radius: 0px 0px 0px 80px;">
+                    <i class="fa fa-envelope" style="font-size:20px;"></i> 
+                    <span class="badge badge-light" style="position: absolute;left:25px;top:5px; font-size:8px;background-color: red;">3</span></a></li>
+                    
+                    <li class="dropdown user-dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="text-decoration: none;border-bottom: none; color: #fff;background-color:rgb(5, 153, 221);"> 
+                        <img src="images/Ellipse_4.png" alt="" width="30px"> Miller<b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                           <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                           <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                           <li class="divider"></li>
+                           <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+                       </ul>
+                   </li>
+                   
+                </ul>
+            </div>
+         </nav>
+    </div>
+    <!-- /#wrapper -->
+<div class="container-fluid" id="wrappers">
+  <div class="row">
+      <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" id="float-left">
+          
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  <div class="row">
+                      
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                          <!-- <h4 class="pull-left">Enter Employee Details</h4> -->
+                         
+                          <a class="btn btn-info pull-right" data-toggle="modal" href='#modal_generate_bill'><i class="fa fa-plus"></i> Generate Bill</a>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+      
+      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" id="yesmove">
+         <div class="panel panel-default quicklinks" style="border-radius:10px; padding:15px; box-shadow: -5px 0px 20px -18px rgba(14, 0, 0, 0.75);">
+             <div class="panel-body">
+                <h5 style="margin-left:17px;"> <strong>Quick Links</strong></h5>
+                <hr>
+                <div class="row">
+                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                       <div class="row">
+                            <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
+                                <a href="pharmacy.html" class="icons-box3">
+                                    <img src="images/pharmacy.svg" alt="wedget-panels" draggable="false">
+                                </a>
+                                <h4>Pharmacy</h4>
+                            </div>
+                            <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
+                                <a href="" class="icons-box2">
+                                    <img src="images/warehouse.svg" alt="wedget-panels" draggable="false">
+                                </a>
+                                <h4>Warehouse</h4>
+                            </div>
+                       </div>
+                       <div class="row">
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
+                            <a href="hrm.html">
+                                <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                            </a>
+                            <h4>HRM</h4>
+                        </div>
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
+                            <a href="hrm.html">
+                                <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                            </a>
+                            <h4>HRM</h4>
+                        </div>
+                   </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
+                            <a href="hrm.html">
+                                <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                            </a>
+                            <h4>HRM</h4>
+                        </div>
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
+                            <a href="hrm.html">
+                                <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                            </a>
+                            <h4>HRM</h4>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+             </div>
+         </div>
+      </div>
+  </div>  
+</div>
+<div class="container-fluid" style="margin-top:200px;" id="foot">
+    <div class="row">
+        <!-- <div class="col-xs-12 col-sm-1 col-md-2 col-lg-2" id="footer-color">
+           <p class="text-center">Hospital Management</p>
+        </div> -->
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="footer-right-color">
+            <p>Copywirte &copy; 2020 Powered By Webbermill</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery v3.3.1.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/theme.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
+<div class="modal fade" id="modal_generate_bill">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content">
+            <div class="modal-header" style=" background: rgb(5, 153, 221);">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <!-- <h4 class="modal-title">Generate Bill</h4> -->
+            </div>
+            <form enctype="application/x-www-form-urlencoded" method="POST">
+            <div class="modal-body ">
+                  
+               <div class="row">
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        <label for="text">Enter Patient ID</label>
+                        <input type="text" name="patient_id" id="patient_id" class="form-control" value="" required="required" title="" placeholder="">
+                    </div>
+                    <div class="col-sm-3">
+                         <label for="text">&nbsp;</label>
+                        <!-- <div class="input-group"> -->
+                            <input type="submit" name="add_new_patient" id="add_new_patient" value="Add New Patient" style="background: rgb(5, 153, 221); color:white" class="btn form-control col-sm-12">
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="text"></label>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                              <button class="btn" style="background: rgb(5, 153, 221); color:white" type="button">Bill #</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Bill Number">
+                          </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="text"></label>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                              <button class="btn" style="background: rgb(5, 153, 221); color:white" type="button"> Select Date</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Date">
+                          </div>
+                     </div>
+                </div>
+                
+               </div>
+               <hr>
+
+               <div class="row">
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        <label for="text">Medical Category <span class="text-danger">*</span></label>
+                       
+                       <select name="" id="input" class="form-control" required="required">
+                           <option value="">Select Category</option>
+                           <option value=""></option>
+                           <option value=""></option>
+                       </select>
+                       
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="text">Medical Name <span class="text-danger">*</span></label>
+                        <!-- <div class="input-group"> -->
+                            <select name="medicine" id="medicine" class="form-control" required="required">
+                                <option value="">Select Medicine</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="text">Batch Number <span class="text-danger">*</span></label>
+                        <!-- <div class="input-group"> -->
+                            <select name="batch_number" id="batch_number" class="form-control" required="required">
+                                <option value="">Select Batch Number</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                          <!-- </div> -->
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="text">Expiry Date<span class="text-danger">*</span></label>
+                        <!-- <div class="input-group"> -->
+                            <input type="text" name="expiry_date" id="expiry_date" class="form-control" placeholder="Date">
+                          <!-- </div> -->
+                     </div>
+                </div>
+                
+               </div>
+               <br>
+
+               <div class="row">
+                <div class="form-group table-responsive">
+                    <table  class="table small-text" id="tb">
+                        <tr class="tr-header">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th><a href="javascript:void(0);" style="font-size:18px;" id="addMore" title=""><span class="glyphicon glyphicon-plus"></span></a></th>
+                        <tr>
+                        <td>
+                            <!-- <div class="col-sm-9"> -->
+                                <label for="text">Quantity Available / Qty <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="qty_available[]" placeholder="" value="2">
+                                    <span class="input-group-btn">
+                                      <button class="btn" style="background: rgb(5, 153, 221); color:white" type="button">9</button>
+                                    </span>
+                                    
+                                  </div>
+                            <!-- </div> -->
+                        </td>
+                       
+                        <td>
+                            <!-- <div class="col-sm-9"> -->
+                                <label for="text">Sales Price (GHS) <span class="text-danger">*</span></label>
+                                <input type="text" name="sales_price[]" class="form-control">
+                            <!-- </div> -->
+                        </td>
+                        
+                        <td>
+                            <!-- <div class="col-sm-9"> -->
+                                <label for="text">Amount (GHS) <span class="text-danger">*</span></label>
+                                <input type="text" name="amount[]" class="form-control">
+                            <!-- </div> -->
+                        </td>
+                        <td><a href='javascript:void(0);'  class='remove'><span class='glyphicon glyphicon-remove'></span></a></td>
+                        </tr>
+                        </table>
+                </div>
+                
+               </div>
+               <hr>
+
+               <div class="row">
+                <div class="form-group">
+
+                    <div class="col-sm-3">
+                        <label for="hospital_doctor">Hospital Doctor </label>
+                        <select name="hospital_doctor" id="hospital_doctor" class="form-control" required="required">
+                            <option value="">Select Hospital Doctor</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="hospital_doctor_name">Doctor Name</label>
+                            <input type="text" name="hospital_doctor_name" id="hospital_doctor_name" class="form-control" placeholder="">
+                     </div>
+
+                     <div class="col-sm-3">
+                         <div> &nbsp;</div>
+                        <label for="text">Total (GHS) </label>
+                            
+                     </div>
+                     
+
+                    <div class="col-sm-3">
+                        <label for="text">&nbsp;</label>
+                       <div class="">0 </div>
+                           
+                    </div>
+                </div>
+              
+                
+               </div>
+               <br>
+               <div class="row">
+                <div class="form-group">
+                     <div class="table-responsive">
+                         
+                         <table  width="100%">
+                            <tbody>
+                                <tr>
+                                <td rowspan="3">
+                                    <div class="col-sm-11">
+                                    <label for="note">Note </label>
+                                    <textarea class="form-control" rows="5" id="note" name="note"></textarea>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>Discount(GHS)</td>
+                                <td>_____%</td>
+                                <td>________</td>
+                                </tr>
+                                <tr>
+                                <td></td>
+                                <td>Tax (GHS)</td>
+                                <td>_____ %</td>
+                                <td>________</td>
+                                </tr>
+                                <tr>
+                                <td></td>
+                                <td>Net Amount(GHS)</td>
+                                <td></td>
+                                <td>________</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                     </div>
+                </div> 
+               </div>
+
+               
+               
+              
+
+               
+               
+            </div>
+        </form>
+            <div class="modal-footer">
+                <button type="submit" class="btn" style="background: rgb(5, 153, 221); color:white">Calculate</button>
+                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  -->
+               
+            </div>
+         
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+<script>
+$(function(){
+    $('#addMore').on('click', function() {
+              var data = $("#tb tr:eq(1)").clone(true).appendTo("#tb");
+              data.find("input").val('');
+     });
+     $(document).on('click', '.remove', function() {
+         var trIndex = $(this).closest("tr").index();
+            if(trIndex>1) {
+             $(this).closest("tr").remove();
+             
+           } else {
+             alert("Sorry!! Can't remove first row!");
+           }
+      });
+});      
+</script>
+
