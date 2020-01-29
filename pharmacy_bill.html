@@ -36,9 +36,9 @@
        }
 
        button{
-        border-radius:6px !important;
-        border: none !important;
-        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
+            border-radius:6px !important;
+            border: none !important;
+            box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
         
     }
 
@@ -48,6 +48,9 @@
        }
        .remove{
            color: red;
+       }
+       .close{
+           color: red !important;
        }
        #form-search input{
         box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important; 
@@ -221,10 +224,10 @@
 
 <div class="modal fade" id="modal_generate_bill">
     <div class="modal-dialog modal-lg ">
-        <div class="modal-content">
-            <div class="modal-header" style=" background: rgb(5, 153, 221);">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <!-- <h4 class="modal-title">Generate Bill</h4> -->
+        <div class="modal-content" style="border-radius:10px !important;">
+            <div class="modal-header" style=" background: rgb(5, 153, 221);border-radius:10px 10px 0px 0px;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
+                <h4 class="modal-title" style="color: #fff;">Generate Bill</h4>
             </div>
             <form enctype="application/x-www-form-urlencoded" method="POST">
             <div class="modal-body ">
@@ -396,25 +399,27 @@
                             <tbody>
                                 <tr>
                                 <td rowspan="3">
-                                    <div class="col-sm-11">
-                                    <label for="note">Note </label>
-                                    <textarea class="form-control" rows="5" id="note" name="note"></textarea>
+                                    <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Note</label>
+                                        <textarea class="form-control" rows="5" cols="22" id="message-text"></textarea>
+                                      </div>
                                     </div>
                                 </td>
                                 <td></td>
-                                <td>Discount(GHS)</td>
+                                <td>&nbsp;&nbsp;Discount(GHS)</td>
                                 <td>_____%</td>
                                 <td>________</td>
                                 </tr>
                                 <tr>
                                 <td></td>
-                                <td>Tax (GHS)</td>
+                                <td>&nbsp;&nbsp;Tax (GHS)</td>
                                 <td>_____ %</td>
                                 <td>________</td>
                                 </tr>
                                 <tr>
                                 <td></td>
-                                <td>Net Amount(GHS)</td>
+                                <td>&nbsp;&nbsp;Net Amount(GHS)</td>
                                 <td></td>
                                 <td>________</td>
                                 </tr>
