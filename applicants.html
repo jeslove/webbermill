@@ -38,6 +38,23 @@
            font-size: 13px !important;
            color: rgb(139, 138, 138);
        }
+        .icons{
+            background:rgba(72, 163, 238, 0.253);
+            border-radius:15px;
+            padding-left: 1px;
+            padding-right: 1px;
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+        .icons img{
+            width:35px;
+            height:35px;
+        }
+        div > h4{
+            font-size: 12px;
+            color: rgb(143, 140, 140);
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -115,7 +132,7 @@
           <div class="panel panel-default" style="border-radius: 10px;">
               <div class="panel-body">
 
-               <h5>New Patient <span class="fa fa-user" style="color: cyan;"></span></h5>
+               <h5>New Patient <img src="images/hr/add-employee.svg" alt="" width="15px"></h5>
 
                <form action="/" method="post" enctype="application/x-www-form-urlencoded">
 
@@ -255,47 +272,65 @@
                 <div class="row">
                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                        <div class="row">
-                            <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
-                                <a href="hrm.html">
-                                    <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                            <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                <a href="hrms.html" class="icons">
+                                    <img src="images/hr/home.svg" alt="wedgets-panels" draggable="false">
                                 </a>
-                                <h4>HRM</h4>
+                                <h4>Home</h4>
                             </div>
-                            <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
-                                <a href="hrm.html">
-                                    <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                            <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                <a href="add-employees.html" class="icons">
+                                    <img src="images/hr/employee.svg" alt="wedgets-panels"  draggable="false">
                                 </a>
-                                <h4>HRM</h4>
+                                <h4>Employees</h4>
                             </div>
                        </div>
+                       <br>
                        <div class="row">
-                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
-                            <a href="hrm.html">
-                                <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                            <a href="interview.html" class="icons">
+                                <img src="images/hr/interview.svg" alt="wedgets-panels"  draggable="false">
                             </a>
-                            <h4>HRM</h4>
+                            <h4>Interview</h4>
                         </div>
-                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
-                            <a href="hrm.html">
-                                <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                            <a href="payroll.html" class="icons">
+                                <img src="images/hr/payroll.svg" alt="wedgets-panels"  draggable="false">
                             </a>
-                            <h4>HRM</h4>
+                            <h4>Payroll</h4>
                         </div>
                    </div>
+                   <br>
                     <div class="row">
-                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
-                            <a href="hrm.html">
-                                <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                            <a href="leave.html" class="icons">
+                                <img src="images/hr/leave.svg" alt="wedgets-panels" draggable="false">
                             </a>
-                            <h4>HRM</h4>
+                            <h4>Leave</h4>
                         </div>
-                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6  icons">
-                            <a href="hrm.html">
-                                <img src="images/patient.svg" alt="wedgets-panels" draggable="false">
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                            <a href="benefit.html" class="icons">
+                                <img src="images/hr/compensation.svg" alt="wedgets-panels" draggable="false">
                             </a>
-                            <h4>HRM</h4>
+                            <h4>Benefits</h4>
                         </div>
                     </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                            <a href="duty_roster.html" class="icons">
+                                <img src="images/hr/dutyroster.svg" alt="wedgets-panels"  draggable="false">
+                            </a>
+                            <h4>Duty Roster</h4>
+                        </div>
+                        <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                            <a href="todo.html" class="icons">
+                                <img src="images/hr/todo.svg" alt="wedgets-panels"  draggable="false">
+                            </a>
+                            <h4>To do list </h4>
+                        </div>
+                    </div>
+                    <br>
                    </div>
                 </div>
              </div>
