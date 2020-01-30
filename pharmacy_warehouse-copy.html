@@ -23,7 +23,7 @@
 
     <style>
         input{
-            border-radius: 6px !important;
+            border-radius: 20px !important;
             border: none !important;
             box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
             
@@ -35,20 +35,6 @@
          box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
          
      }
-
-     select{
-        border-radius:6px !important;
-        border: none !important;
-        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
-        
-    }
-
-    textarea{
-        border-radius:6px !important;
-        border: none !important;
-        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
-        
-    }
  
         label{
             font-size: 13px !important;
@@ -81,7 +67,7 @@
                <div class="navbar-header">
                  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                  <img src="images/electric.svg" alt=""  style="width:17px; margin-top:10px;" draggable="false"> 
-                 <span style="position: relative; top:8px;">Pharmacy</span>
+                 <span style="position: relative; top:8px;">ADMIN</span>
                </div>
              <form action="" method="post" enctype="application/x-www-form-urlencoded" class="pull-right" id="form-search">
                 <input type="search" name="search" id="search" required="required" placeholder="search anything">
@@ -92,7 +78,7 @@
                     <div class="userimages">
                         <img src="images/Ellipse_5.png" alt="user-images" draggable="false">
                         <h4><i class="fa fa-circle text-success"></i> Kate Iverson Appiah</h4>
-                        <h5 class="text-span">Super Pharmacy</h5>
+                        <h5 class="text-span">Super Admin</h5>
                     </div>
                     <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"><span><img src="images/birthday.svg" alt=""></span> </i>Birthday Reminder</a></li>
                     <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> <span><img src="images/notice-board.svg" alt=""></span> Notice-Board</a></li>
@@ -304,9 +290,8 @@
     </div>
    </div> <!-- Modal suppliers list Ends -->
 
-
    <!-- Modal purchase medecine -->
-<!-- <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+<div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <form>
       <div class="modal-content">
@@ -340,298 +325,5 @@
       </div>
       </form>
     </div>
-   </div> Modal purchase medecine Ends -->
-
-   <!-- <div class="modal fade" id="modal_generate_bill"> -->
-    <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg ">
-        <div class="modal-content" style="border-radius:10px !important;">
-            <div class="modal-header" style=" background: rgb(5, 153, 221);border-radius:10px 10px 0px 0px;">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
-                <h4 class="modal-title" style="color: #fff;">Add Purchase Medicine</h4>
-            </div>
-            <form enctype="application/x-www-form-urlencoded" method="POST">
-            <div class="modal-body ">
-                  
-               <div class="row">
-                <div class="form-group">
-                    <div class="col-sm-3">
-                        <label for="text">Select Supplier Name</label>
-                        <select name="" id="input" class="form-control" required="required">
-                            <option value="">Supplier Name</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                    <div class="col-sm-3">
-                         <label for="text">Purchase Date</label>
-                        <!-- <div class="input-group"> -->
-                            <input type="date" name="purchase_date" id="purchase_date" class="form-control">
-                        <!-- </div> -->
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label for="text"></label>
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                              <button class="btn" style="background: rgb(5, 153, 221); color:white" type="button">MRP(GHS)</button>
-                            </span>
-                            <input type="text" class="form-control" value="" placeholder="" >
-                          </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label for="text"></label>
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                              <button class="btn" style="background: rgb(5, 153, 221); color:white" type="button"> Batch Amount</button>
-                            </span>
-                            <input type="text" id="text" name="text" class="form-control" >
-                          </div>
-                     </div>
-                </div>
-                
-               </div>
-               <hr>
-
-               <div class="row">
-                <div class="form-group">
-                    <div class="col-sm-3">
-                        <label for="text">Medical Category <span class="text-danger">*</span></label>
-                       
-                       <select name="" id="input" class="form-control" required="required">
-                           <option value="">Select Category</option>
-                           <option value=""></option>
-                           <option value=""></option>
-                       </select>
-                       
-                    </div>
-                    <div class="col-sm-3">
-                        <label for="text">Medical Name <span class="text-danger">*</span></label>
-                        <!-- <div class="input-group"> -->
-                            <select name="medicine" id="medicine" class="form-control" required="required">
-                                <option value="">Select Medicine</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                        <!-- </div> -->
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label for="text">Batch Number <span class="text-danger">*</span></label>
-                        <!-- <div class="input-group"> -->
-                            <select name="batch_number" id="batch_number" class="form-control" required="required">
-                                <option value="">Select Batch Number</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                          <!-- </div> -->
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label for="text">Expiry Date<span class="text-danger">*</span></label>
-                        <!-- <div class="input-group"> -->
-                            <input type="date" name="expiry_date" id="expiry_date" class="form-control" placeholder="Date">
-                          <!-- </div> -->
-                     </div>
-                </div>
-                
-               </div>
-               <br>
-
-               <div class="row">
-                <div class="form-group table-responsive">
-                    <table  class="table small-text" id="tb">
-                        <tr class="tr-header">
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th><a href="javascript:void(0);" style="font-size:18px;" id="addMore" title=""><span class="glyphicon glyphicon-plus"></span></a></th>
-                        <tr>
-                        <td>
-                            <!-- <div class="col-sm-9"> -->
-                                <label for="text">Quantity <span class="text-danger">*</span></label>
-                                <!-- <div class="input-group"> -->
-                                    <input type="text" class="form-control" name="quantity[]" placeholder="" value="">
-                                  <!-- </div> -->
-                            <!-- </div> -->
-                        </td>
-                       
-                        <td>
-                            <!-- <div class="col-sm-9"> -->
-                                <label for="text">Sales Price (GHS) <span class="text-danger">*</span></label>
-                                <input type="text" name="sales_price[]" class="form-control">
-                            <!-- </div> -->
-                        </td>
-                        
-                        <td>
-                            <!-- <div class="col-sm-9"> -->
-                                <label for="text">Amount (GHS) <span class="text-danger">*</span></label>
-                                <input type="text" name="amount[]" class="form-control">
-                            <!-- </div> -->
-                        </td>
-
-                        <td>
-                            <!-- <div class="col-sm-9"> -->
-                                <label for="text">Packaging Quantity <span class="text-danger">*</span></label>
-                                <!-- <div class="input-group"> -->
-                                    <input type="text" class="form-control" name="quantity[]" placeholder="" value="">
-                                  <!-- </div> -->
-                            <!-- </div> -->
-                        </td>
-
-                        <td>
-                            <!-- <div class="col-sm-9"> -->
-                                <label for="text">Amount (GHS) <span class="text-danger">*</span></label>
-                                <input type="text" name="amount[]" class="form-control">
-                            <!-- </div> -->
-                        </td>
-                        <td><a href='javascript:void(0);'  class='remove'><span class='glyphicon glyphicon-remove'></span></a></td>
-                        </tr>
-                        </table>
-                </div>
-                
-               </div>
-               <hr>
-
-              
-               <div class="row">
-                <div class="form-group">
-                     <div class="table-responsive">
-                         
-                         <table  width="100%">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <!-- <div class="row"> -->
-                                            <div class="col-sm-6">    
-                                            <div class="form-group">
-                                            <label for="text">Hospital Doctor <span class="text-danger">*</span></label>
-                                            <select name="hospital_doctor" id="hospital_doctor" class="form-control" required="required">
-                                                <option value="">Select Hospital Doctor</option>
-                                                <option value=""></option>
-                                                <option value=""></option>
-                                            </select>
-                                        </div>
-                                            </div>
-
-                                        <div class="col-sm-6"> 
-                                            <div class="form-group">
-                                                <label for="text"> Doctor Name <span class="text-danger">*</span></label>
-                                                <input type="text" name="doctor_name" id="doctor_name" class="form-control" value="" required="required"
-                                                title="" placeholder="">
-                                            </div>
-                                        </div>
-                                        <!-- </div> -->
-                                   
-                                    </td>
-
-
-                                    
-                                    <td><div class="col-sm- pull-left"> 
-                                        <div class="form-group">
-                                            <label for="text">Total (GHS) </label>
-                                            
-                                        </div>
-                                    </div>
-                                    </td>
-                                    <td> <div class="">________________</div></td>
-
-                                
-                            </tr>
-                                    
-                                    
-                                    
-                                
-                                 <tr>
-                                    <td rowspan="4">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label for="message-text" class="col-form-label">Note</label>
-                                                <textarea class="form-control" rows="3" cols="22" id="message-text"></textarea>
-                                              </div>
-                                            </div>
-                                    <!-- <br> -->
-                                     <br>
-                                     <div class="col-sm-12">
-                                        <div class="form-group">
-                                            
-                                                <label for="hospital_doctor_name">Click to upload</label>
-                                                    <input type="file" name="upload_file" id="upload_file" class="form-control" placeholder="">
-                                             </div>
-                                            </div>
-                                    </td>
-                                    <td>Discount (GHS)</td>
-                                    <td>____________%</td>
-                                    <td>________________</td>
-                                </tr>
-                                    
-                                    <tr>
-                                     <td>Tax (GHS)</td>
-                                    <td>_____________%</td>
-                                    <td>________________</td>
-                                    </tr>
-                                    
-                                
-                                 <tr>
-                                 <td>Net Amount (GHS)</td>
-                                    <td>________________</td>
-                                    <td>________________</td>
-                                   
-                              
-                                 </tr>
-
-                                   <tr>
-                                 <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    
-                              
-                                 </tr>
-                                </tbody>
-                            </table>
-                     </div>
-                </div> 
-               </div>
-
-               
-               
-              
-
-               
-               
-            </div>
-        </form>
-            <div class="modal-footer">
-                <button type="submit" class="btn" style="background: rgb(5, 153, 221); color:white">Calculate</button>
-                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  -->
-               
-            </div>
-         
-        </div>
-    </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
-<script>
-$(function(){
-    $('#addMore').on('click', function() {
-              var data = $("#tb tr:eq(1)").clone(true).appendTo("#tb");
-              data.find("input").val('');
-     });
-     $(document).on('click', '.remove', function() {
-         var trIndex = $(this).closest("tr").index();
-            if(trIndex>1) {
-             $(this).closest("tr").remove();
-             
-           } else {
-             alert("Sorry!! Can't remove first row!");
-           }
-      });
-});      
-</script>
-
+   </div> <!-- Modal purchase medecine Ends -->
 
