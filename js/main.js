@@ -110,6 +110,8 @@ $(document).ready(function(){
     
 })
 
+
+
 // service worker script 
 
 const cacheName = 'v1';
@@ -141,3 +143,5 @@ self.addEventListener('fetch', (e) => {
     }).catch(err => caches.match(e.request).then(res => res))
     );
 });
+
+
