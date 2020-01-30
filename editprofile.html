@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hospital Management Ghana</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!--//Favicon-->
+    <noscript>
+        <meta http-equiv="refresh" runat="server" id="mtaJSCheck" content="0;nopage.asp" />
+    </noscript>
+    <link id="themecss" rel="stylesheet" type="text/css"
+        href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <style>
+        input {
+            border-radius: 0px 6px 6px 0px !important;
+            box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
+            border: none;
+        }
+
+        label {
+            font-size: 13px !important;
+            color: rgb(139, 138, 138);
+        }
+
+        #form-search input {
+            box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2) !important;
+            border-radius: 20px !important;
+            padding: 10px !important;
+            margin-top: 7px !important;
+        }
+
+        .icons {
+            background: rgba(72, 163, 238, 0.253);
+            border-radius: 15px;
+            padding-left: 1px;
+            padding-right: 1px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .icons img {
+            width: 35px;
+            height: 35px;
+        }
+
+        div>h4 {
+            font-size: 12px;
+            color: rgb(143, 140, 140);
+            padding: 10px;
+        }
+        .panel-default {
+            box-shadow: inset 1px 2px 2px rgba(2, 64, 179, 0.055), 0px 0px 8px rgba(5, 54, 100, 0.383) !important;
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            border:1px solid rgb(5, 153, 221);
+        }
+        #sizing-addon2{
+            background: rgba(5, 153, 221, 0.157);
+            border-radius:6px 0px 0px 6px;
+            /* position: relative; left:10px; */
+            box-shadow: inset 1px 2px 2px rgba(2, 64, 179, 0.055), 0px 0px 8px rgba(5, 54, 100, 0.383) !important;
+        }
+        #inputs input{
+            background: #fff;
+            padding:10px;
+            margin: 0px !important;
+        }
+        #post{
+            width:200px;
+        }
+        #money{
+            width:50px;
+        }
+        #moneys{
+            width:150px;
+        }
+        #inputs-put input{
+            background: #fff;
+            padding:8px;
+            width:125px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: red;">Logo</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                <span class="menu-toggle navbar-brand" style="font-size:20px;cursor:pointer;color:blue;">&#9776;</span>
+
+                <div class="navbar-header">
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    <img src="images/electric.svg" alt="" style="width:17px; margin-top:10px;" draggable="false">
+                    <span style="position: relative; top:8px;">HRM</span>
+                </div>
+                <form action="" method="post" enctype="application/x-www-form-urlencoded" class="pull-right"
+                    id="form-search">
+                    <input type="search" name="search" id="search" required="required" placeholder="search anything">
+                </form>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav" id="mySidenav">
+                    <div class="userimages">
+                        <img src="images/Ellipse_5.png" alt="user-images" draggable="false">
+                        <h4><i class="fa fa-circle text-success"></i> Kate Iverson Appiah</h4>
+                        <h5 class="text-span">Super Admin</h5>
+                    </div>
+                    <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"><span><img
+                                    src="images/birthday.svg" alt=""></span> </i>Birthday Reminder</a></li>
+                    <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> <span><img
+                                    src="images/notice-board.svg" alt=""></span> Notice-Board</a></li>
+                    <li class="nav nav-list nav-list-expandable">
+                        <a style="color: rgb(179, 178, 178); font-size:13px;"><span><img src="images/message.svg"
+                                    alt=""> Messages <span class="caret"></span></a>
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> Hardware & Networking
+                                </a></li>
+                            <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> Software Engineering
+                                </a></li>
+                        </ul>
+                    <li>
+                    <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"><span><img
+                                    src="images/events.svg" alt=""></span> Events</a></li>
+                    <li><a href="#" style="color: rgb(179, 178, 178); font-size:13px;"> <span><img
+                                    src="images/settings.svg" alt=""></span> Settings</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right navbar-user" id="showcolor">
+                    <li class="dropdown user-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                            style="text-decoration: none;border-bottom: none; color:#fff;background-color:rgb(5, 153, 221);border-radius: 0px 0px 0px 80px;">
+                            <!-- <i class="fa fa-bell" style="font-size:25px;"></i>--> <span><img src="images/bell .svg"
+                                    alt="" style="width:20px;"></span>
+                            <span class="badge badge-light"
+                                style="position: absolute;left:20px; font-size:8px; background-color: black;">1</span></a>
+                    </li>
+
+                    <li class="dropdown user-dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                            style="text-decoration: none;border-bottom: none; color:#fff;background-color:rgb(5, 153, 221);border-radius: 0px 0px 0px 80px;">
+                            <i class="fa fa-envelope" style="font-size:20px;"></i>
+                            <span class="badge badge-light"
+                                style="position: absolute;left:25px;top:5px; font-size:8px;background-color: red;">3</span></a>
+                    </li>
+
+                    <li class="dropdown user-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                            style="text-decoration: none;border-bottom: none; color: #fff;background-color:rgb(5, 153, 221);">
+                            <img src="images/Ellipse_4.png" alt="" width="30px"> Miller<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- /#wrapper -->
+
+    <div class="container-fluid" id="wrappers">
+        <h3>Payroll Profile</h3>
+        <div class="row">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" id="float-left">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div>
+                                    <img src="images/Group 91- Payroll Profile Details.jpg" width="200px">
+                                </div>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                                    <div class="form-group">
+                                        <label for="">Employee Full Name</label>
+                                        <input type="text" name="name" id="name" class="form-control">
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                             <div class="form-group">
+                                                 <label for="">Employee ID</label>
+                                                 <input type="text" name="id" id="id" class="form-control">
+                                             </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Department</label>
+                                                <input type="text" name="id" id="id" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Position</label>
+                                        <input type="text" name="name" id="name" class="form-control">
+                                    </div>
+                            </div>
+                        </div>
+                          <h4>Payroll Details</h4>
+                         <div class="row">
+                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">Tax (%)</span>
+                                    <input type="text" class="form-control" aria-describedby="sizing-addon2">
+                                </div>
+                             </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">
+                                        SSNIT(%)</span>
+                                    <input type="text" class="form-control" aria-describedby="sizing-addon2">
+                                </div>
+                            </div>
+                         </div>
+                         <br>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon2">Gross Salary</span>
+                                        <input type="text" class="form-control" aria-describedby="sizing-addon2">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon2">
+                                            Flat Deduction</span>
+                                        <input type="text" class="form-control" aria-describedby="sizing-addon2">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <button class="btn" style="background: rgb(5, 153, 221); color: #fff; border-radius: 6px;">Add Loan (%)</button>
+                             
+                            <div class="row">
+                                <br>
+                                <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11" id="inputs">
+                                    <input type="text" readonly value="Bay Port">
+                                    <input type="text" readonly value="January - December 2020" id="post">
+                                    <input type="text" readonly value="15%" id="money">
+                                    <input type="text" readonly value="Cancel">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <br>
+                                <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11" id="inputs">
+                                    <input type="text" readonly value="Load Name">
+                                    <input type="text" readonly value="Period" id="post">
+                                    <input type="text" readonly value="Load Rate" id="moneys">
+                                    <input type="text" readonly value="Cancel" id="moneys">
+                                </div>
+                            </div>
+                             <br>
+                            <button class="btn" style="background: rgb(5, 153, 221); color: #fff; border-radius: 6px;">Add Overtime</button>
+                            <br>
+                            <div class="row">
+                                <br>
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="inputs-put">
+                                    <input type="text" readonly value="Date">
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="inputs-put">
+                                    <input type="text" readonly value="Per Hour">
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="inputs-put">
+                                    <input type="text" readonly value="Number of Hours">
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="inputs-put">
+                                    <input type="text" readonly value="One Time">
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="inputs-put">
+                                    <input type="text" readonly value="Total">
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="inputs-put">
+                                    <input type="text" readonly value="Cancel">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                            <button type="submit" class="btn" style="background: rgb(5, 153, 221); color: #fff;border-radius:6px;">Save Info</button>
+                            <button type="submit" class="btn" style="background: rgb(9, 1, 117); color: #fff;border-radius:6px;">Generate</button>
+                            </center>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" id="yesmove">
+                <div class="panel panel-default quicklinks"
+                    style="border-radius:10px; padding:15px; box-shadow: -5px 0px 20px -18px rgba(14, 0, 0, 0.75);">
+                    <div class="panel-body">
+                        <h5 style="margin-left:17px;"> <strong>Quick Links</strong></h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                        <a href="hrms.html" class="icons">
+                                            <img src="images/hr/home.svg" alt="wedgets-panels" draggable="false">
+                                        </a>
+                                        <h4>Home</h4>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                        <a href="add-employees.html" class="icons">
+                                            <img src="images/hr/employee.svg" alt="wedgets-panels" draggable="false">
+                                        </a>
+                                        <h4>Employees</h4>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                        <a href="interview.html" class="icons">
+                                            <img src="images/hr/interview.svg" alt="wedgets-panels" draggable="false">
+                                        </a>
+                                        <h4>Interview</h4>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                        <a href="payroll.html" class="icons">
+                                            <img src="images/hr/payroll.svg" alt="wedgets-panels" draggable="false">
+                                        </a>
+                                        <h4>Payroll</h4>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                        <a href="leave.html" class="icons">
+                                            <img src="images/hr/leave.svg" alt="wedgets-panels" draggable="false">
+                                        </a>
+                                        <h4>Leave</h4>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                        <a href="benefit.html" class="icons">
+                                            <img src="images/hr/compensation.svg" alt="wedgets-panels"
+                                                draggable="false">
+                                        </a>
+                                        <h4>Benefits</h4>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                        <a href="duty_roster.html" class="icons">
+                                            <img src="images/hr/dutyroster.svg" alt="wedgets-panels" draggable="false">
+                                        </a>
+                                        <h4>Duty Roster</h4>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6 col-sm-4 col-lg-6">
+                                        <a href="todo.html" class="icons">
+                                            <img src="images/hr/todo.svg" alt="wedgets-panels" draggable="false">
+                                        </a>
+                                        <h4>To do list </h4>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="margin-top:200px;" id="foot">
+        <div class="row">
+            <!-- <div class="col-xs-12 col-sm-1 col-md-2 col-lg-2" id="footer-color">
+           <p class="text-center">Hospital Management</p>
+        </div> -->
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="footer-right-color">
+                <p>Copywirte &copy; 2020 Powered By Webbermill</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery v3.3.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
