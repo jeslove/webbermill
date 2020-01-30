@@ -247,23 +247,23 @@
                         <!-- </div> -->
                     </div>
 
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <label for="text"></label>
                         <div class="input-group">
                             <span class="input-group-btn">
                               <button class="btn" style="background: rgb(5, 153, 221); color:white" type="button">Bill #</button>
                             </span>
-                            <input type="text" class="form-control" placeholder="Bill Number">
+                            <input type="text" class="form-control" value="14" placeholder="Bill Number" readonly>
                           </div>
                     </div>
 
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <label for="text"></label>
                         <div class="input-group">
                             <span class="input-group-btn">
                               <button class="btn" style="background: rgb(5, 153, 221); color:white" type="button"> Select Date</button>
                             </span>
-                            <input type="text" class="form-control" placeholder="Date">
+                            <input type="date" id="date" name="date" class="form-control" placeholder="Date">
                           </div>
                      </div>
                 </div>
@@ -308,7 +308,7 @@
                     <div class="col-sm-3">
                         <label for="text">Expiry Date<span class="text-danger">*</span></label>
                         <!-- <div class="input-group"> -->
-                            <input type="text" name="expiry_date" id="expiry_date" class="form-control" placeholder="Date">
+                            <input type="date" name="expiry_date" id="expiry_date" class="form-control" placeholder="Date">
                           <!-- </div> -->
                      </div>
                 </div>
@@ -355,11 +355,11 @@
                         </tr>
                         </table>
                 </div>
-                
+                <hr>
                </div>
-               <hr>
+               
 
-               <div class="row">
+               <!-- <div class="row">
                 <div class="form-group">
 
                     <div class="col-sm-3">
@@ -391,8 +391,8 @@
                 </div>
               
                 
-               </div>
-               <br>
+               </div> -->
+               <!-- <br> -->
                <div class="row">
                 <div class="form-group">
                      <div class="table-responsive">
@@ -400,31 +400,92 @@
                          <table  width="100%">
                             <tbody>
                                 <tr>
-                                <td rowspan="3">
-                                    <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Note</label>
-                                        <textarea class="form-control" rows="5" cols="22" id="message-text"></textarea>
-                                      </div>
+                                    <td>
+                                        <!-- <div class="row"> -->
+                                            <div class="col-sm-6">    
+                                            <div class="form-group">
+                                            <label for="text">Hospital Doctor <span class="text-danger">*</span></label>
+                                            <select name="hospital_doctor" id="hospital_doctor" class="form-control" required="required">
+                                                <option value="">Select Hospital Doctor</option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                            </div>
+
+                                        <div class="col-sm-6"> 
+                                            <div class="form-group">
+                                                <label for="text"> Doctor Name <span class="text-danger">*</span></label>
+                                                <input type="text" name="doctor_name" id="doctor_name" class="form-control" value="" required="required"
+                                                title="" placeholder="">
+                                            </div>
+                                        </div>
+                                        <!-- </div> -->
+                                   
+                                    </td>
+
+
+                                    
+                                    <td><div class="col-sm- pull-left"> 
+                                        <div class="form-group">
+                                            <label for="text">Total (GHS) </label>
+                                            
+                                        </div>
                                     </div>
-                                </td>
-                                <td></td>
-                                <td>&nbsp;&nbsp;Discount(GHS)</td>
-                                <td>_____%</td>
-                                <td>________</td>
+                                    </td>
+                                    <td> <div class="">________________</div></td>
+
+                                
+                            </tr>
+                                    
+                                    
+                                    
+                                
+                                 <tr>
+                                    <td rowspan="4">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Note</label>
+                                                <textarea class="form-control" rows="3" cols="22" id="message-text"></textarea>
+                                              </div>
+                                            </div>
+                                    <!-- <br> -->
+                                     <!-- <br> -->
+                                     <!-- <div class="col-sm-12">
+                                        <div class="form-group">
+                                            
+                                                <label for="hospital_doctor_name">Click to upload</label>
+                                                    <input type="file" name="upload_file" id="upload_file" class="form-control" placeholder="">
+                                             </div>
+                                            </div> -->
+                                    </td>
+                                    <td>Discount (GHS)</td>
+                                    <td>____________%</td>
+                                    <td>________________</td>
                                 </tr>
-                                <tr>
-                                <td></td>
-                                <td>&nbsp;&nbsp;Tax (GHS)</td>
-                                <td>_____ %</td>
-                                <td>________</td>
-                                </tr>
-                                <tr>
-                                <td></td>
-                                <td>&nbsp;&nbsp;Net Amount(GHS)</td>
-                                <td></td>
-                                <td>________</td>
-                                </tr>
+                                    
+                                    <tr>
+                                     <td>Tax (GHS)</td>
+                                    <td>_____________%</td>
+                                    <td>________________</td>
+                                    </tr>
+                                    
+                                
+                                 <tr>
+                                 <td>Net Amount (GHS)</td>
+                                    <td>________________</td>
+                                    <td>________________</td>
+                                   
+                              
+                                 </tr>
+
+                                   <tr>
+                                 <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    
+                              
+                                 </tr>
                                 </tbody>
                             </table>
                      </div>
